@@ -16,13 +16,13 @@ On the server:
 var server = new ot.Server();
 
 server.broadcast = function(delta) {
-	// You're in charge of how you want to send out data
-	// Websockets are probably your best bet, i like http://socketcluster.io/
+  // You're in charge of how you want to send out data
+  // Websockets are probably your best bet, i like http://socketcluster.io/
 }
 
 function onReceiveDelta(version, delta) {
-	var deltaToSend = server.receiveDelta(version, delta);
-	server.broadcast(deltaToSend);
+  var deltaToSend = server.receiveDelta(version, delta);
+  server.broadcast(deltaToSend);
 }
 
 ```
@@ -41,7 +41,7 @@ otClient.sendDelta = function(version, delta) {
 
 // Overridden method
 otClient.applyDelta = function(delta) {
-	quillEditor.updateContents(delta, 'api');
+  quillEditor.updateContents(delta, 'api');
 }
 
 // When the user makes a change
@@ -53,7 +53,7 @@ quillEditor.on('text-change', function(delta, oldDelta, source) {
 });
 
 function onReceiveDelta(delta) {
-	// If this delta was sent by this client they also need to call otClient.serverAck();
-	otClient.applyFromServer(delta);
+  // If this delta was sent by this client they also need to call otClient.serverAck();
+  otClient.applyFromServer(delta);
 }
-```	
+```  
