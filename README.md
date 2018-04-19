@@ -53,7 +53,8 @@ quillEditor.on('text-change', function(delta, oldDelta, source) {
 });
 
 function onReceiveDelta(delta) {
-  // If this delta was sent by this client they also need to call otClient.serverAck();
+  // If this delta was sent by this client they need to call otClient.serverAck() instead
+  // this prevents deltas that have already been applied by the user from being applied twice
   otClient.applyFromServer(delta);
 }
 ```  
