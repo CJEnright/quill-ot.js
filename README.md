@@ -53,7 +53,7 @@ quillEditor.on('text-change', function(delta, oldDelta, source) {
 });
 
 function onReceiveDelta(delta) {
-  // If this delta was sent by this client they also need to call otClient.serverAck();
+  // If this delta was sent by this client they need to call `otClient.serverAck()` instead
   otClient.applyFromServer(delta);
 }
 ```  
