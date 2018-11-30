@@ -1,15 +1,16 @@
 {
-  "name": "quill-ot.js",
-  "version": "1.0.0",
+  "name": "quill-ot",
+  "version": "1.1.0",
   "description": "Quill.js implementation of Operational Transform",
   "author": "C.J. Enright",
   "homepage": "https://github.com/CJEnright/quill-ot.js",
-  "license": "MIT	",
+  "license": "MIT",
   "dependencies": {
+    "npm": "^6.0.1",
     "quill-delta": "^3.5.0"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/CJEnright/quill-ot.js"
-  },
+  }
 }
